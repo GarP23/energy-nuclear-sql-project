@@ -1,113 +1,182 @@
 # Energy Nuclear SQL Project
 
-## Descripción General
-
-Este proyecto analiza la evolución de la energía nuclear en el contexto de la transición energética mundial mediante el diseño e implementación de una base de datos relacional en MySQL.
-
-El propósito es transformar un conjunto de datos energéticos en bruto en un modelo dimensional estructurado que permita realizar consultas analíticas, identificar tendencias y generar información relevante para comprender el papel de la energía nuclear dentro de las estrategias globales de descarbonización.
-
-La base de datos se diseña siguiendo principios de modelado dimensional, utilizando una tabla de hechos y múltiples tablas de dimensiones para facilitar el análisis mediante SQL.
+## Análisis de la Evolución de la Energía Nuclear en el Contexto de la Transición Energética Mundial (1965–2022)
 
 ---
 
-## Dataset
+# Descripción General
 
-**Fuente:** World Energy Consumption Dataset (Our World in Data)
+Este proyecto analiza la evolución histórica del consumo energético mundial entre 1965 y 2022 mediante el diseño e implementación de una base de datos relacional en MySQL.
 
-**Descripción:**
+El objetivo principal es estudiar el papel de la energía nuclear dentro del contexto de la transición energética global, comparándola con otras fuentes energéticas como los combustibles fósiles y las energías renovables.
 
-El conjunto de datos contiene información histórica relacionada con la producción y consumo energético, generación eléctrica, emisiones de CO₂, población, PIB y diferentes fuentes de energía para múltiples países.
-
-**Granularidad:**
-
-* Un registro por país y año.
-
-**Variables principales utilizadas:**
-
-* País
-* Año
-* Generación eléctrica nuclear
-* Consumo de combustibles fósiles
-* Generación de energías renovables
-* Emisiones de CO₂
-* Producto Interno Bruto (PIB)
-* Población
-* Indicadores de consumo energético
+Para ello se desarrolló un modelo dimensional tipo Star Schema, acompañado de procesos de limpieza de datos, consultas analíticas SQL y visualizaciones en Power BI que permiten extraer insights relevantes sobre la evolución de los sistemas energéticos mundiales.
 
 ---
 
-## Objetivos del Proyecto
+# Dataset
 
-### Objetivo General
+## Fuente
 
-Diseñar, implementar y analizar una base de datos relacional que permita estudiar la evolución de la energía nuclear y su papel dentro de la transición energética mundial.
+World Energy Consumption Dataset
 
-### Objetivos Específicos
+Fuente original: Our World in Data
 
-* Diseñar un modelo de base de datos relacional y dimensional.
-* Crear una tabla de hechos con indicadores energéticos relevantes.
-* Implementar al menos cuatro tablas de dimensiones.
-* Definir claves primarias (PK), claves foráneas (FK) y restricciones de integridad.
-* Realizar procesos de limpieza y validación de datos.
-* Documentar las decisiones de diseño mediante comentarios en SQL.
-* Desarrollar consultas analíticas para explorar tendencias y patrones.
-* Generar insights sobre el desarrollo de la energía nuclear, la adopción de energías renovables y la reducción de emisiones.
+Disponible a través de Kaggle.
+
+## Cobertura Temporal
+
+1965 – 2022
+
+## Cobertura Geográfica
+
+Más de 300 países, territorios y agregaciones geográficas.
+
+## Variables Utilizadas
+
+### Variables de contexto
+
+* country
+* year
+* iso_code
+* population
+* gdp
+
+### Variables energéticas
+
+* nuclear_consumption
+
+* nuclear_share_energy
+
+* coal_consumption
+
+* coal_share_energy
+
+* gas_consumption
+
+* gas_share_energy
+
+* oil_consumption
+
+* oil_share_energy
+
+* hydro_consumption
+
+* hydro_share_energy
+
+* solar_consumption
+
+* solar_share_energy
+
+* wind_consumption
+
+* wind_share_energy
+
+* biofuel_consumption
+
+* biofuel_share_energy
 
 ---
 
-## Modelo de Datos
+# Objetivos del Proyecto
 
-### Tabla de Hechos
+## Objetivo General
 
-**Fact_ProduccionEnergetica**
+Diseñar e implementar una base de datos relacional que permita analizar la evolución de la energía nuclear y su papel dentro de la transición energética mundial.
+
+## Objetivos Específicos
+
+* Diseñar un modelo dimensional tipo Star Schema.
+* Construir una tabla de hechos y múltiples dimensiones.
+* Implementar claves primarias y claves foráneas.
+* Garantizar la calidad e integridad de los datos.
+* Aplicar técnicas de limpieza y validación.
+* Realizar análisis exploratorio mediante SQL.
+* Implementar consultas analíticas avanzadas.
+* Generar visualizaciones interactivas en Power BI.
+* Obtener insights relacionados con la transición energética global.
+
+---
+
+# Arquitectura del Proyecto
+
+El proyecto sigue una arquitectura analítica basada en un modelo dimensional.
+
+## Tabla de Hechos
+
+### fact_energy_source
+
+Granularidad:
+
+País + Año + Fuente Energética
 
 Métricas principales:
 
-* Generación de energía nuclear (TWh)
-* Consumo energético total
-* Generación de energías renovables
-* Consumo de combustibles fósiles
-* Emisiones de CO₂
-* Indicadores económicos (PIB)
+* consumption_twh
+* share_energy_pct
 
-### Tablas de Dimensiones
+---
 
-**Dim_Pais**
-**Dim_Country**
+## Tablas de Dimensión
+
+### dim_country
+
 * country_id
 * country_name
 * iso_code
 
-**Dim_año**
-**Dim_Year**
-* year_id
-* year
-* decade
+### dim_year
 
-**Dim_FuenteEnergetica**
-**Dim_Energy_Source**
+* year_id
+* year_value
+
+### dim_energy_source
+
 * energy_source_id
 * source_name
 
-**Dim_Region**
-**Dim_Region**
+Fuentes energéticas:
 
-Esta dimensión no existe en el dataset original y será creada manualmente.
+* Nuclear
+* Coal
+* Gas
+* Oil
+* Hydro
+* Solar
+* Wind
+* Biofuel
+
+### dim_region
 
 * region_id
 * region_name
 
-**Dim_TipoEnergia**
-**Dim_Energy_Category**
+---
 
-category_id
-category_name
+# Proceso ETL
 
-## Tecnologías Utilizadas
+La preparación inicial de los datos se realizó mediante Python utilizando el script:
+
+scripts/prepare_dataset.py
+
+Principales transformaciones:
+
+* Selección de variables relevantes.
+* Eliminación de registros sin país o año.
+* Generación de un dataset limpio para carga en MySQL.
+
+Archivo generado:
+
+data/processed/energy_transition_clean.csv
+
+---
+
+# Tecnologías Utilizadas
 
 * MySQL
 * MySQL Workbench
 * DBeaver
+* Python
 * Visual Studio Code
 * Git
 * GitHub
@@ -116,48 +185,97 @@ category_name
 
 ---
 
-## Estructura del Repositorio
+# Preguntas de Negocio
+
+## Q1. ¿Qué países generan la mayor cantidad de energía nuclear?
+
+Identificar los principales productores históricos de energía nuclear.
+
+## Q2. ¿Cómo ha evolucionado el consumo mundial de energía nuclear desde 1965?
+
+Analizar tendencias históricas y cambios relevantes en la adopción de esta tecnología.
+
+## Q3. ¿Qué países presentan una mayor dependencia de los combustibles fósiles?
+
+Evaluar el peso relativo del carbón, petróleo y gas natural.
+
+## Q4. ¿Qué países lideran la adopción de energías renovables?
+
+Comparar el consumo acumulado de fuentes renovables entre países.
+
+## Q5. ¿Qué relación existe entre el PIB y el consumo energético?
+
+Analizar la relación entre desarrollo económico y demanda energética.
+
+---
+
+# Principales Resultados
+
+Los análisis realizados muestran que:
+
+* Estados Unidos lidera históricamente el consumo de energía nuclear.
+* Francia destaca por la importancia de la energía nuclear dentro de su matriz energética.
+* China se posiciona como uno de los principales impulsores de las energías renovables.
+* Los combustibles fósiles continúan representando una parte significativa del consumo energético mundial.
+* Existe una correlación positiva entre PIB y consumo energético.
+* La transición energética avanza de forma desigual entre países y regiones.
+
+---
+
+# Dashboard Power BI
+
+El proyecto incluye un dashboard interactivo desarrollado en Power BI para visualizar:
+
+* Top países consumidores de energía nuclear.
+* Evolución histórica de la energía nuclear.
+* Dependencia de combustibles fósiles.
+* Liderazgo en energías renovables.
+* Relación entre PIB y consumo energético.
+
+Archivo:
+
+powerbi/dashboard.pbix
+
+---
+
+# Estructura del Repositorio
 
 ```text
-energy-nuclear-sql-project/
+energy-nuclear-sql-project
 │
-├── data/
-│   ├── raw/
-│   └── processed/
+├── data
+│   ├── raw
+│   └── processed
 │
-├── sql/
-│   ├── schema/
-│   ├── inserts/
-│   ├── queries/
-│   └── views/
-│
-├── docs/
+├── docs
 │   ├── PROJECT_BRIEF.md
-│   ├── data_dictionary.md
-│   └── database_model.md
+│   ├── business_questions.md
+│   └── data_dictionary.md
 │
-├── powerbi/
+├── powerbi
+│   └── dashboard.pbix
 │
-├── screenshots/
+├── scripts
+│   └── prepare_dataset.py
+│
+├── sql
+│   ├── 01_schema.sql
+│   ├── 02_data.sql
+│   ├── 04_eda.sql
+│   ├── 05_views.sql
+│   └── 06_functions.sql
+│
+├── docs/images
 │
 └── README.md
 ```
 
-## Resultados Esperados
-
-Al finalizar el proyecto, la base de datos permitirá:
-
-* Analizar la evolución histórica de la energía nuclear.
-* Comparar indicadores energéticos entre países y regiones.
-* Evaluar el avance de la transición energética.
-* Identificar líderes en generación de energía baja en carbono.
-* Construir dashboards interactivos en Power BI.
-* Aplicar consultas SQL avanzadas utilizando JOIN, GROUP BY, subconsultas, vistas y funciones analíticas.
-
 ---
 
-## Autor
+# Autor
 
 **Giovanni Alexander Ron Peralta**
 
-Proyecto SQL — Análisis de Datos Energéticos y Modelado Relacional
+Máster en Data Science e Inteligencia Artificial
+
+Proyecto SQL — Análisis de la Evolución de la Energía Nuclear en el Contexto de la Transición Energética Mundial

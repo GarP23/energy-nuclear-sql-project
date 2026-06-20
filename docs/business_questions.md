@@ -1,67 +1,74 @@
 # Business Questions
 
-## Q1
+## Q1. ¿Qué países generan la mayor cantidad de energía nuclear?
 
-¿Qué países generan la mayor cantidad de energía nuclear?
-**Objetivo:** 
-Identificar los principales productores de energía nuclear y comparar su participación dentro del panorama energético mundial.
+### Objetivo de negocio
 
-## Q2
-¿Cómo ha evolucionado la generación de energía nuclear a nivel mundial a lo largo del tiempo?
-**Objetivo:** 
-Analizar las tendencias históricas de producción nuclear y detectar períodos de crecimiento, estabilidad o disminución.
+Identificar los países con mayor consumo histórico de energía nuclear y analizar cuáles han apostado de forma más significativa por esta tecnología dentro de su estrategia energética nacional.
 
-## Q3
-¿Qué países presentan una mayor dependencia de los combustibles fósiles?
-**Objetivo:** 
-Determinar qué economías continúan basando gran parte de su consumo energético en fuentes fósiles.
+### Valor aportado
 
-## Q4
-¿Qué regiones lideran la transición hacia fuentes de energía bajas en carbono?
-**Objetivo:** 
-Comparar regiones geográficas según su adopción de energía nuclear y energías renovables.
+Permite identificar a los principales actores del sector nuclear y comprender el papel que desempeña esta fuente energética en la seguridad energética y en los procesos de descarbonización.
 
-## Q5
-¿Cómo se compara la energía nuclear con las energías renovables en la generación de energía limpia?
-**Objetivo:** Evaluar la contribución relativa de ambas alternativas dentro de la transición energética global.
+---
 
-## Q6
-¿Qué regiones generan las mayores emisiones de CO₂ asociadas al consumo energético?
-**Objetivo:** 
-Analizar el impacto ambiental de las diferentes matrices energéticas a nivel regional.
+## Q2. ¿Cómo ha evolucionado el consumo mundial de energía nuclear desde 1965?
 
-## Q7
-¿Cómo ha cambiado la participación de la energía nuclear dentro de la matriz energética mundial?
-**Objetivo:** Medir la evolución del peso relativo de la energía nuclear frente a otras fuentes energéticas.
+### Objetivo de negocio
 
-## Q8
-¿Qué países poseen una matriz energética más diversificada?
-**Objetivo:** 
-Identificar países que combinan múltiples fuentes de energía y presentan menor dependencia de una sola categoría energética.
+Analizar la evolución temporal de la energía nuclear a nivel global, identificando períodos de crecimiento, estabilización y descenso.
 
-## Q9
-¿Cómo se comparan las fuentes de energía bajas en carbono frente a los combustibles fósiles?
-**Objetivo:**
-Analizar diferencias en adopción, crecimiento y contribución energética entre ambas categorías.
+### Valor aportado
 
-## Q10
-¿Qué países han reducido más su intensidad de carbono a lo largo del tiempo?
-**Objetivo:** 
-Identificar aquellos países que han logrado disminuir sus emisiones de CO₂ en relación con su consumo energético.
+Ayuda a comprender cómo factores tecnológicos, regulatorios, económicos y geopolíticos han influido en el desarrollo de la energía nuclear durante las últimas décadas.
 
-## Q11
-¿Qué regiones presentan la mayor participación de energía nuclear en su producción energética?
-**Objetivo:** 
-Comparar el grado de adopción de energía nuclear entre diferentes regiones del mundo.
+---
 
-## Q12
-¿Cuál ha sido la evolución de las distintas categorías energéticas durante las últimas décadas?
-**Objetivo:** 
-Analizar el crecimiento o disminución de las categorías:
+## Q3. ¿Qué países presentan una mayor dependencia de los combustibles fósiles?
+
+### Objetivo de negocio
+
+Identificar aquellos países con mayores niveles de consumo acumulado de carbón, petróleo y gas natural.
+
+### Valor aportado
+
+Permite evaluar el grado de dependencia de las fuentes fósiles y dimensionar los desafíos asociados a la transición energética y la reducción de emisiones.
+
+---
+
+## Q4. ¿Qué países lideran la adopción de energías renovables?
+
+### Objetivo de negocio
+
+Comparar los países con mayor consumo acumulado de energías renovables, considerando fuentes como la energía solar, eólica, hidroeléctrica y biocombustibles.
+
+### Valor aportado
+
+Facilita la identificación de los principales referentes en el despliegue de energías renovables y permite analizar el avance de la transición energética a escala global.
+
+---
+
+## Q5. ¿Qué relación existe entre el PIB y el consumo energético?
+
+### Objetivo de negocio
+
+Evaluar la relación entre la actividad económica y la demanda energética mediante el análisis conjunto del Producto Interior Bruto (PIB) y el consumo de energía de los distintos países.
+
+### Valor aportado
+
+Permite comprender cómo el crecimiento económico influye en las necesidades energéticas y detectar posibles diferencias en eficiencia energética entre países y regiones.
+
+---
+
+# Alcance del Proyecto
+
+Este proyecto analiza la evolución histórica del consumo energético mundial entre 1965 y 2022 mediante el diseño e implementación de una base de datos relacional en MySQL y su posterior explotación analítica utilizando SQL y Power BI.
+
+El análisis se centra en las siguientes categorías energéticas:
 
 * Energía Nuclear
-* Energías Renovables
-* Combustibles Fósiles
-* Energía Baja en Carbono
+* Combustibles Fósiles (Carbón, Petróleo y Gas Natural)
+* Energías Renovables (Solar, Eólica, Hidroeléctrica y Biocombustibles)
+* Indicadores Económicos (PIB)
 
-para comprender los cambios estructurales en la transición energética mundial.
+El objetivo principal es comprender cómo han evolucionado los distintos modelos energéticos nacionales en el contexto de la transición energética mundial y evaluar el papel que desempeñan la energía nuclear y las energías renovables en la reducción de la dependencia de los combustibles fósiles.

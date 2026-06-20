@@ -1,0 +1,10 @@
+# Manipulación y Limpieza de Datos (Usado en scripts/prepare_dataset.py)
+pandas>=2.0.0
+numpy>=1.24.0
+
+# Conectores de Bases de Datos (Opcional, por si automatizas la carga a MySQL desde Python)
+mysql-connector-python>=8.0.0
+SQLAlchemy>=2.0.0
+
+# Descarga de datos directamente desde Kaggle (Opcional)
+kaggle>=1.5.16

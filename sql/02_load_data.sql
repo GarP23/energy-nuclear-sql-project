@@ -4,11 +4,11 @@ USE energy_transition_db;
 
 CREATE TABLE stg_energy_raw (
     country VARCHAR(255),
-    year VARCHAR(10),       -- Cambiado a VARCHAR
+    year VARCHAR(10),      
     iso_code VARCHAR(10),
 
-    population TEXT,        -- Cambiado a TEXT
-    gdp TEXT,               -- Cambiado a TEXT
+    population TEXT,        
+    gdp TEXT,               
 
     nuclear_consumption TEXT,
     nuclear_share_energy TEXT,

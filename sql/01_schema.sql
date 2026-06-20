@@ -72,7 +72,7 @@ CREATE TABLE fact_energy_source(
 );
 
 -- ahora se crea un índice compuesto sobre país --
--- y año para optimizar las consultas analíticas --
+-- y año para optimizar las consultas --
 -- más frecuentes. -- 
 
 CREATE INDEX idx_fact_country_year

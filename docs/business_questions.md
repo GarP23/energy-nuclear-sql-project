@@ -8,8 +8,15 @@ Identificar los países con mayor consumo histórico de energía nuclear y anali
 
 ### Valor aportado
 
-Permite identificar a los principales actores del sector nuclear y comprender el papel que desempeña esta fuente energética en la seguridad energética y en los procesos de descarbonización.
+Al analizar el consumo acumulado de energía nuclear por país, observamos que Estados Unidos ocupa claramente el primer lugar, superando los 80.000 TWh durante el periodo analizado.
 
+En segundo lugar aparece Francia, con más de 40.000 TWh. Este resultado es especialmente interesante porque, aunque Francia es mucho más pequeña que Estados Unidos, ha apostado históricamente por la energía nuclear como una parte fundamental de su sistema energético.
+
+Japón ocupa la tercera posición, seguido por países como Alemania, Rusia, Corea del Sur, Canadá, Reino Unido, China y Ucrania.
+
+Un aspecto que llama la atención es el caso de China. Aunque actualmente es una de las grandes potencias energéticas del mundo, aparece más abajo en el ranking histórico porque su desarrollo nuclear comenzó más tarde que el de otros países.
+
+Conclusión: Estados Unidos y Francia son los referentes históricos en energía nuclear, mientras que China representa una de las grandes apuestas de crecimiento para el futuro.
 ---
 
 ## Q2. ¿Cómo ha evolucionado el consumo mundial de energía nuclear desde 1965?
@@ -20,8 +27,17 @@ Analizar la evolución temporal de la energía nuclear a nivel global, identific
 
 ### Valor aportado
 
-Ayuda a comprender cómo factores tecnológicos, regulatorios, económicos y geopolíticos han influido en el desarrollo de la energía nuclear durante las últimas décadas.
+La evolución de la energía nuclear muestra una historia bastante clara.
 
+Entre los años 60 y principios de los 2000 se produjo un crecimiento muy fuerte. Muchos países comenzaron a construir centrales nucleares para cubrir la creciente demanda energética, lo que hizo que el consumo nuclear aumentara rápidamente.
+
+A partir de los años 2000 el crecimiento se ralentiza y comienza una etapa de estabilidad.
+
+Posteriormente se observa una caída importante alrededor de 2011, coincidiendo con el accidente de Fukushima en Japón. Este acontecimiento tuvo un impacto global y llevó a varios países a replantear sus políticas nucleares.
+
+Desde entonces se aprecia una recuperación gradual impulsada por los objetivos de reducción de emisiones y transición energética, aunque sin alcanzar el ritmo de crecimiento que se observó durante las décadas anteriores.
+
+Conclusión: La energía nuclear pasó por una etapa de expansión muy fuerte, después se estancó y actualmente está recuperando protagonismo debido a las necesidades de descarbonización.
 ---
 
 ## Q3. ¿Qué países presentan una mayor dependencia de los combustibles fósiles?
@@ -32,7 +48,15 @@ Identificar aquellos países con mayores niveles de consumo acumulado de carbón
 
 ### Valor aportado
 
-Permite evaluar el grado de dependencia de las fuentes fósiles y dimensionar los desafíos asociados a la transición energética y la reducción de emisiones.
+mayor consumo acumulado de combustibles fósiles.
+
+Estados Unidos supera los 1,1 millones de TWh acumulados, mientras que China ronda los 800.000 TWh.
+
+Detrás de ellos aparecen Rusia, Japón, Alemania, Reino Unido, Francia, Italia, India y Canadá.
+
+Sin embargo, este resultado debe interpretarse teniendo en cuenta el tamaño de estas economías. No significa necesariamente que sean menos sostenibles, sino que son países con una enorme actividad industrial y una gran demanda energética.
+
+Conclusión: Aunque muchos países están avanzando hacia energías más limpias, los combustibles fósiles siguen siendo una parte muy importante del sistema energético mundial.
 
 ---
 
@@ -44,7 +68,15 @@ Comparar los países con mayor consumo acumulado de energías renovables, consid
 
 ### Valor aportado
 
-Facilita la identificación de los principales referentes en el despliegue de energías renovables y permite analizar el avance de la transición energética a escala global.
+Cuando analizamos el consumo acumulado de energías renovables, China aparece como líder absoluto, acercándose a los 75.000 TWh.
+
+Estados Unidos ocupa la segunda posición, seguido por Canadá y Brasil.
+
+En el caso de Canadá y Brasil, gran parte de este resultado se explica por la importancia histórica de la energía hidroeléctrica dentro de sus sistemas energéticos.
+
+También es importante destacar que algunos países como Noruega o Suecia no aparecen entre los primeros puestos en volumen total, pero sí son referentes cuando analizamos el porcentaje de energía renovable dentro de su matriz energética.
+
+Conclusión: China y Estados Unidos lideran la transición energética en términos de volumen, mientras que países como Noruega o Suecia destacan por su nivel de adopción relativa de energías limpias.
 
 ---
 
@@ -56,19 +88,26 @@ Evaluar la relación entre la actividad económica y la demanda energética medi
 
 ### Valor aportado
 
-Permite comprender cómo el crecimiento económico influye en las necesidades energéticas y detectar posibles diferencias en eficiencia energética entre países y regiones.
+Para responder esta pregunta se construyó un gráfico de dispersión comparando el PIB de cada país con su consumo energético.
+
+La tendencia general es bastante clara: los países con mayor PIB suelen tener también un mayor consumo de energía.
+
+Esto tiene sentido porque una economía más grande normalmente requiere más industria, transporte, infraestructura y actividad productiva.
+
+Además, se observa que Estados Unidos aparece como un caso extremo dentro del conjunto de datos, situándose entre los países con mayor PIB y también con uno de los mayores consumos energéticos.
+
+Sin embargo, también encontramos algunos países con niveles elevados de PIB pero consumos energéticos relativamente moderados, lo que podría indicar mejoras en eficiencia energética.
+
+Conclusión: Existe una relación positiva entre crecimiento económico y consumo energético, aunque algunos países muestran señales de estar creciendo de forma más eficiente
 
 ---
 
 # Alcance del Proyecto
 
-Este proyecto analiza la evolución histórica del consumo energético mundial entre 1965 y 2022 mediante el diseño e implementación de una base de datos relacional en MySQL y su posterior explotación analítica utilizando SQL y Power BI.
+Después de analizar los datos, podemos observar que la transición energética mundial está avanzando, pero todavía convive con una fuerte dependencia de los combustibles fósiles.
 
-El análisis se centra en las siguientes categorías energéticas:
+La energía nuclear sigue desempeñando un papel importante como fuente de energía baja en carbono, especialmente en países como Estados Unidos y Francia.
 
-* Energía Nuclear
-* Combustibles Fósiles (Carbón, Petróleo y Gas Natural)
-* Energías Renovables (Solar, Eólica, Hidroeléctrica y Biocombustibles)
-* Indicadores Económicos (PIB)
+Al mismo tiempo, las energías renovables están creciendo rápidamente, con China liderando este proceso a nivel global.
 
-El objetivo principal es comprender cómo han evolucionado los distintos modelos energéticos nacionales en el contexto de la transición energética mundial y evaluar el papel que desempeñan la energía nuclear y las energías renovables en la reducción de la dependencia de los combustibles fósiles.
+Finalmente, los resultados muestran que el crecimiento económico continúa estando estrechamente relacionado con el consumo energético, lo que plantea el desafío de seguir creciendo de forma más sostenible y eficiente en las próximas décadas.

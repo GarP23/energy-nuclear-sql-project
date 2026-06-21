@@ -177,13 +177,13 @@ data/processed/energy_transition_clean.csv
 
 * MySQL
 * MySQL Workbench
-* DBeaver
+
 * Python
 * Visual Studio Code
 * Git
 * GitHub
 * Power BI
-* Docker
+
 
 ---
 
